@@ -62,12 +62,29 @@ npm run preview
 
 ## Security Note
 
+⚠️ **IMPORTANT SECURITY WARNING** ⚠️
+
 This application uses the OpenAI API directly from the browser. Your API key is:
 - Never sent to any server except OpenAI
 - Stored only in your browser's memory during the session
 - Not saved to localStorage or any persistent storage
 
-For production use, consider implementing a backend API to handle OpenAI requests securely.
+**However**, using API keys directly in the browser is NOT recommended for production applications because:
+- The API key can be extracted from browser network traffic
+- Users could abuse your API key and incur costs
+- There's no rate limiting or usage control
+
+**For production use**, you should:
+1. Implement a backend API server (Node.js, Python, etc.)
+2. Store the API key securely on the server (environment variables)
+3. Have your React app call your backend API
+4. Implement authentication, rate limiting, and usage monitoring on your backend
+
+This implementation is suitable for:
+- Personal use
+- Educational purposes
+- Demonstrations
+- Prototyping
 
 ## How it Works
 

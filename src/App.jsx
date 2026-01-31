@@ -26,6 +26,8 @@ function App() {
     setResult(null)
 
     try {
+      // WARNING: Using the OpenAI API directly from the browser exposes the API key
+      // For production use, implement a backend API to handle OpenAI requests securely
       const openai = new OpenAI({
         apiKey: apiKey,
         dangerouslyAllowBrowser: true
