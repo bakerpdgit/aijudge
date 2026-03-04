@@ -298,8 +298,8 @@ const App = () => {
   const [judgeInstructions, setJudgeInstructions] = useState("");
 
   const [testPairs, setTestPairs] = useState([
-    { id: 'p1', factA: 'The suspect fled in a crimson vehicle.', factB: 'A witness saw a red car driving away.', result: null, logs: [] },
-    { id: 'p2', factA: 'He was born in the summer of 1985.', factB: 'His birth date is November 15th, 1985.', result: null, logs: [] }
+    { id: 'p1', factA: "The suspect fled in a crimson vehicle.", factB: "A witness saw a red car driving away.", result: null, logs: [] },
+    { id: 'p2', factA: "The suspect was confirmed by a neighbour to be at his home all evening which is backed up by CCTV footage.", factB: "The crime occurred in the town centre at 21:30.", result: null, logs: [] }
   ]);
 
   const [metrics, setMetrics] = useState({ totalTime: 0, totalTokens: 0 });
